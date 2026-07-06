@@ -3,7 +3,7 @@ export default function Filters({ filter, setFilter }: any) {
     <div className="flex gap-3 mb-4">
       <select
         onChange={(e) => setFilter({ ...filter, category: e.target.value })}
-        className="border p-2"
+        className="border border-emerald-300 bg-emerald-100 text-emerald-900 p-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
       >
         <option value="">All Categories</option>
         <option>Food</option>
@@ -14,7 +14,7 @@ export default function Filters({ filter, setFilter }: any) {
 
       <select
         onChange={(e) => setFilter({ ...filter, sort: e.target.value })}
-        className="border p-2"
+        className="border border-emerald-300 bg-emerald-100 text-emerald-900 p-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 cursor-pointer"
       >
         <option value="">Sort</option>
         <option value="recent">Recent</option>

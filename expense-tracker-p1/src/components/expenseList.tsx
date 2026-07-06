@@ -25,23 +25,38 @@ export default function ExpenseList({ expenses, setExpenses, filter }: Props) {
   };
 
   return (
-    <div className="grid gap-3">
-      {data.map((e) => (
-        <div key={e.id} className="bg-white p-3 shadow flex justify-between">
-          <div>
-            <h2 className="font-bold">{e.category}</h2>
-            <p>{e.note}</p>
-            <p className="text-sm text-gray-500">{e.date}</p>
-          </div>
+    <div className="grid gap-4">
+  {data.map((e) => (
+    <div
+      key={e.id}
+      className="bg-gradient-to-r from-emerald-50 to-blue-50 border border-emerald-200 rounded-xl p-4 shadow-md hover:shadow-xl transition-all duration-300 flex justify-between items-center"
+    >
+      <div>
+        <h2 className="text-lg font-bold text-emerald-700">
+          {e.category}
+        </h2>
 
-          <div className="text-right">
-            <p className="font-bold">₹{e.amount}</p>
-            <button onClick={() => deleteExpense(e.id)} className="text-red-500">
-              Delete
-            </button>
-          </div>
-        </div>
-      ))}
+        <p className="text-gray-700">{e.note}</p>
+
+        <p className="text-sm text-gray-500 mt-1">
+           {e.date}
+        </p>
+      </div>
+
+      <div className="text-right">
+        <p className="text-xl font-bold text-green-600 mb-2">
+          ₹{e.amount}
+        </p>
+
+        <button
+          onClick={() => deleteExpense(e.id)}
+          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition duration-300 shadow"
+        >
+          Delete
+        </button>
+      </div>
     </div>
+  ))}
+</div>
   );
 }

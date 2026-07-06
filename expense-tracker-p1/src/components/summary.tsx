@@ -5,7 +5,7 @@ export default function Summary({ expenses }: { expenses: Expense[] }) {
 
   return (
     <div className="bg-white p-4 mb-4 shadow">
-      <h2 className="text-xl font-bold">Total: ₹{total}</h2>
+      <h2 className="text-xl font-bold text-blue-500">Total: ₹{total}</h2>
     </div>
   );
 }

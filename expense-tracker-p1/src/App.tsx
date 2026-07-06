@@ -9,7 +9,6 @@ import Charts from "./components/charts";
 
 function App() {
   const [expenses, setExpenses] = useState<Expense[]>(getExpenses());
-
   const [filter, setFilter] = useState({
     category: "",
     sort: "",
@@ -21,22 +20,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">
+      <h1 className="text-3xl text-blue-500 font-bold text-center mb-6">
         Smart Expense Tracker 💰
       </h1>
-
       <ExpenseForm setExpenses={setExpenses} />
-
       <Summary expenses={expenses} />
-
       <Filters filter={filter} setFilter={setFilter} />
-
       <ExpenseList
         expenses={expenses}
         setExpenses={setExpenses}
         filter={filter}
       />
-
       <Charts expenses={expenses} />
     </div>
   );

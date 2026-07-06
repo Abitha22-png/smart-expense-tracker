@@ -36,13 +36,13 @@ export default function ExpenseForm({ setExpenses }: Props) {
         placeholder="Amount"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
-        className="border p-2 w-full mb-2"
+        className="border border-emerald-300 bg-emerald-50 p-2 w-full mb-2 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
       />
 
       <select
         value={category}
         onChange={(e) => setCategory(e.target.value as any)}
-        className="border p-2 w-full mb-2"
+        className="border border-emerald-300 bg-emerald-50 p-2 w-full mb-2 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
       >
         <option>Food</option>
         <option>Travel</option>
@@ -54,7 +54,7 @@ export default function ExpenseForm({ setExpenses }: Props) {
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
-        className="border p-2 w-full mb-2"
+        className="border border-emerald-300 bg-emerald-50 p-2 w-full mb-2 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
       />
 
       <input
@@ -62,7 +62,7 @@ export default function ExpenseForm({ setExpenses }: Props) {
         placeholder="Note"
         value={note}
         onChange={(e) => setNote(e.target.value)}
-        className="border p-2 w-full mb-2"
+        className="border border-emerald-300 bg-emerald-50 p-2 w-full mb-2 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500"
       />
 
       <button className="bg-blue-500 text-white px-4 py-2 rounded">
