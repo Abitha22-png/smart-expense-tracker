@@ -1,0 +1,4 @@
+[build]
+  base = "expense-tracker-p1"
+  command = "npm run build"
+  publish = "dist"
